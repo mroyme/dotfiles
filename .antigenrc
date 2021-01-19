@@ -1,0 +1,22 @@
+# Use Oh My Zsh
+antigen use oh-my-zsh
+
+# Plugins
+antigen bundle z
+antigen bundle thefuck
+antigen bundle git-extras
+antigen bundle web-search
+antigen bundle pip
+antigen bundle djui/alias-tips
+antigen bundle mafredri/zsh-async
+antigen bundle sindresorhus/pure
+antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-completions
+
+if [[ "$OSTYPE"="darwin"* ]]; then
+  antigen bundle osx
+fi
+
+# Apply Antigen configuration
+antigen apply
