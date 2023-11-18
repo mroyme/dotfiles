@@ -1,0 +1,73 @@
+format = """
+# $os \
+$username\
+$hostname\
+$directory\
+$git_branch\
+$git_state\
+$git_status\
+$python\
+$conda\
+$kubernetes\
+$fill\
+$cmd_duration\
+$time\
+$line_break\
+$character"""
+
+[os]
+disabled = false
+
+[os.symbols]
+Alpine = ''
+Arch = '󰣇'
+Debian = ''
+Fedora = ''
+FreeBSD = ''
+Gentoo = ''
+Macos = ''
+NixOS = ''
+openSUSE = ''
+Ubuntu = ''
+Windows = ''
+
+[directory]
+style = 'blue'
+
+[character]
+success_symbol = '[;](purple)'
+error_symbol = '[;](red)'
+vimcmd_symbol = '[<](green)'
+
+[git_branch]
+format = '[ $branch]($style)'
+
+[git_status]
+format = '[ [(*$conflicted$untracked$modified$staged$renamed$deleted)](218) ($ahead_behind$stashed)]($style)'
+
+[git_state]
+format = '\([ $state( $progress_current/$progress_total)]($style)\)'
+
+[cmd_duration]
+format = '[ $duration]($style)'
+
+[python]
+format = '[ $symbol $pyenv_prefix($version)( \($virtualenv\))]($style)'
+symbol = ''
+
+[conda]
+format = '[ $symbol $environment]($style)'
+symbol = ''
+
+[kubernetes]
+format = '[ $symbol $context( \($namespace\))]($style)'
+symbol = '󱃾'
+disabled = false
+
+[fill]
+symbol = ' '
+
+[time]
+disabled = false
+format = '[ 󰥔 \[$time\]]($style) '
+time_format = '%T'
