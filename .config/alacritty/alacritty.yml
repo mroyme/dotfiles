@@ -1,0 +1,90 @@
+schemes:
+  ayu-mirage: &ayu-mirage
+    primary:
+      background: "#1f2430"
+      foreground: "#cbccc6"
+      bright_foreground: "#f28779"
+    normal:
+      black: "#212733"
+      red: "#f08778"
+      green: "#53bf97"
+      yellow: "#fdcc60"
+      blue: "#60b8d6"
+      magenta: "#ec7171"
+      cyan: "#98e6ca"
+      white: "#fafafa"
+    bright:
+      black: "#686868"
+      red: "#f58c7d"
+      green: "#58c49c"
+      yellow: "#ffd165"
+      blue: "#65bddb"
+      magenta: "#f17676"
+      cyan: "#9debcf"
+      white: "#ffffff"
+  tokyo-night: &tokyo-night
+    primary:
+      background: "#1a1b26"
+      foreground: "#a9b1d6"
+    normal:
+      black: "#32344a"
+      red: "#f7768e"
+      green: "#9ece6a"
+      yellow: "#e0af68"
+      blue: "#7aa2f7"
+      magenta: "#ad8ee6"
+      cyan: "#449dab"
+      white: "#787c99"
+    bright:
+      black: "#444b6a"
+      red: "#ff7a93"
+      green: "#b9f27c"
+      yellow: "#ff9e64"
+      blue: "#7da6ff"
+      magenta: "#bb9af7"
+      cyan: "#0db9d7"
+      white: "#acb0d0"
+  tokyo-night-storm: &tokyo-night-storm
+    primary:
+      background: "#24283b"
+      foreground: "#a9b1d6"
+    normal:
+      black: "#32344a"
+      red: "#f7768e"
+      green: "#9ece6a"
+      yellow: "#e0af68"
+      blue: "#7aa2f7"
+      magenta: "#ad8ee6"
+      cyan: "#449dab"
+      white: "#9699a8"
+    bright:
+      black: "#444b6a"
+      red: "#ff7a93"
+      green: "#b9f27c"
+      yellow: "#ff9e64"
+      blue: "#7da6ff"
+      magenta: "#bb9af7"
+      cyan: "#0db9d7"
+      white: "#acb0d0"
+
+window:
+  dynamic_padding: true
+  decorations: full
+  # startup_mode: SimpleFullscreen
+scrolling:
+  history: 100000
+font:
+  normal:
+    family: JetBrainsMono Nerd Font
+    style: Regular
+  bold:
+    family: JetBrainsMono Nerd Font
+    style: Bold
+  italic:
+    family: JetBrainsMono Nerd Font
+    style: Italic
+  bold_italic:
+    family: JetBrainsMono Nerd Font
+    style: Bold Italic
+  size: 13
+  colors: *tokyo-night
