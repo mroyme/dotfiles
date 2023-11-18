@@ -1,1 +1,21 @@
 #+TITLE: mroyme's Dotfiles
+
+* Requirements
+- git
+- curl
+
+* Installation
+
+Install config tracking in =$HOME= by running:
+#+begin_src shell
+  curl -Lks https://raw.githubusercontent.com/mroyme/dotfiles/main/.bin/dotfiles-install | /bin/bash
+#+end_src
+
+This requires the public key of the machine where the setup is being installed to be registered as authorized on GitHub.
+
+* Managing dotfiles
+
+This setup is wholly inspired by
+- [[https://www.atlassian.com/git/tutorials/dotfiles][https://www.atlassian.com/git/tutorials/dotfiles]]
+- *Repository:* [[https://bitbucket.org/durdn/cfg/src/master/][Bitbucket - durdn/cfg]]  
+- *Fork (Backup):* [[https://bitbucket.org/madhurjyaroy/cfg/src/master/][Bitbucket - madhurjyaroy/cfg]]
