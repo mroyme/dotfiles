@@ -15,7 +15,7 @@ This requires the public key of the machine where the setup is being installed t
 
 * Managing dotfiles
 
-This setup is wholly inspired by
-- [[https://www.atlassian.com/git/tutorials/dotfiles][https://www.atlassian.com/git/tutorials/dotfiles]]
-- *Repository:* [[https://bitbucket.org/durdn/cfg/src/master/][Bitbucket - durdn/cfg]]  
-- *Fork (Backup):* [[https://bitbucket.org/madhurjyaroy/cfg/src/master/][Bitbucket - madhurjyaroy/cfg]]
+This setup is inspired by
+- [[https://www.atlassian.com/git/tutorials/dotfiles][Using git bare repositories for managing dotfiles]]
+  - *Repository:* [[https://bitbucket.org/durdn/cfg/src/master/][Bitbucket - durdn/cfg]]  
+  - *Fork (Backup):* [[https://bitbucket.org/madhurjyaroy/cfg/src/master/][Bitbucket - madhurjyaroy/cfg]]
