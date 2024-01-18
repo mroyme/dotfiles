@@ -1,0 +1,36 @@
+#window {
+	margin: 0px;
+	border: 2px solid #2e7cf7;
+	border-radius: 9px;
+	opacity: 0.9;
+}
+
+#input {
+	margin: 5px;
+	border: 2px;
+	border-radius: 9px;
+}
+
+#inner-box {
+	margin: 5px;
+	border: 2px;
+	border-radius: 9px;
+}
+
+#outer-box {
+	margin: 0px;
+	border: 0px;
+	border-radius: 9px;
+}
+
+#scroll {
+	margin: 5px;
+	border: 2px;
+	border-radius: 9px;
+}
+
+#text {
+	margin: 5px;
+	border: 2px;
+	border-radius: 9px;
+}
