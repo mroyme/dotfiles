@@ -13,6 +13,13 @@ Install config tracking in =$HOME= by running:
 
 This requires the public key of the machine where the setup is being installed to be registered as authorized on GitHub.
 
+* Configuring your shell
+
+Add the following fuction to your =~/.zshrc= or =~/.bashrc=
+#+begin_src shell
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+#+end_src
+
 * Managing dotfiles
 
 This setup is inspired by
