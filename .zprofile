@@ -10,17 +10,17 @@ if [[ "$(uname -s)" == "Darwin" ]]; then
 
   # GNU grep
   if [[ -e '/opt/homebrew/opt/grep/libexec/gnubin' ]]; then
-    path=('/opt/homebrew/opt/grep/libexec/gnubin', $path)
+    path=('/opt/homebrew/opt/grep/libexec/gnubin' $path)
   fi
 
   # GNU units
   if [[ -e '/opt/homebrew/opt/gnu-units/libexec/gnubin' ]]; then
-    path=('/opt/homebrew/opt/gnu-units/libexec/gnubin', $path)
+    path=('/opt/homebrew/opt/gnu-units/libexec/gnubin' $path)
   fi
 
   # OpenSSL 3
   if [[ -e '/opt/homebrew/opt/openssl@3.0/bin' ]]; then
-    path=('/opt/homebrew/opt/openssl@3.0/bin', $path)
+    path=('/opt/homebrew/opt/openssl@3.0/bin' $path)
   fi
 
   # JetBrains Toolbox
@@ -40,7 +40,7 @@ if [[ -e "${HOME}/.config/emacs/bin" ]]; then
 fi
 
 if [[ -e "${HOME}/.local/bin" ]]; then
-  path=("${HOME}/.local/bin:$PATH", $path)
+  path=("${HOME}/.local/bin:$PATH" $path)
 fi
 
 export PATH
