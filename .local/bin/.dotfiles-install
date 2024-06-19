@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-git clone --bare git@github.com:mroyme/dotfiles.git $HOME/.dotfiles
+git clone --bare --recurse-submodules git@github.com:mroyme/dotfiles.git $HOME/.dotfiles
 function dotfiles {
    /usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME $@
 }
