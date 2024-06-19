@@ -1,0 +1,3 @@
+[submodule "/Users/msroy/.config/nvim"]
+	path = /Users/msroy/.config/nvim
+	url = https://github.com/mroyme/kickstart.nvim
