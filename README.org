@@ -8,7 +8,7 @@
 
 Install config tracking in =$HOME= by running:
 #+begin_src shell
-  curl -Lks https://raw.githubusercontent.com/mroyme/dotfiles/main/.local/bin/_dotfiles-install | /bin/bash
+  curl -Lks https://raw.githubusercontent.com/mroyme/dotfiles/main/.local/bin/.dotfiles-install | /bin/bash
 #+end_src
 
 This requires the public key of the machine where the setup is being installed to be registered as authorized on GitHub.
