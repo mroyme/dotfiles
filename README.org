@@ -8,7 +8,7 @@
 
 Install config tracking in =$HOME= by running:
 #+begin_src shell
-  curl -Lks https://raw.githubusercontent.com/mroyme/dotfiles/main/.local/bin/.dotfiles-install | /bin/bash
+curl -Lks https://raw.githubusercontent.com/mroyme/dotfiles/main/.local/bin/.dotfiles-install | /bin/bash
 #+end_src
 
 This requires the public key of the machine where the setup is being installed to be registered as authorized on GitHub.
@@ -26,3 +26,31 @@ This setup is inspired by
 - [[https://www.atlassian.com/git/tutorials/dotfiles][Using git bare repositories for managing dotfiles]]
   - *Repository:* [[https://bitbucket.org/durdn/cfg/src/master/][Bitbucket - durdn/cfg]]  
   - *Fork (Backup):* [[https://bitbucket.org/madhurjyaroy/cfg/src/master/][Bitbucket - madhurjyaroy/cfg]]
+
+* Applications
+
+** Emacs
+
+*** Builds with native compilation
+
+**** Arch Linux
+
+On Wayland:
+#+begin_src shell
+pacman -S emacs-wayland
+#+end_src
+On X11:
+#+begin_src shell
+pacman -S emacs-nativecomp
+#+end_src
+
+**** macOS
+
+#+begin_src shell
+brew tap d12frosted/emacs-plus
+brew install emacs-plus --with-native-comp --with-savchenkovaleriy-big-sur-icon
+#+end_src
+
+*** Doom Emacs
+
+Follow the instructions available at the [[https://github.com/doomemacs/doomemacs][Doom Emacs GitHub repository]].
