@@ -1,0 +1,36 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `open default settings` command
+// from the command palette or from `Zed` application menu.
+{
+  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "hour_format": "hour24",
+  "indent_guides": {
+    "enabled": true,
+    "line_width": 1,
+    "coloring": "fixed",
+    "background_coloring": "disabled"
+  },
+  "inlay_hints": {
+    "enabled": true,
+    "show_type_hints": true,
+    "show_parameter_hints": true,
+    "show_other_hints": true
+  },
+  "theme": "Catppuccin Mocha",
+  "ui_font_size": 14,
+  "buffer_font_size": 13,
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "vim_mode": true,
+  "tabs": {
+    "close_position": "right",
+    "git_status": true
+  }
+}
