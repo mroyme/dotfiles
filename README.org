@@ -1,0 +1,47 @@
+#+TITLE: dotfiles
+#+AUTHOR: Madhurjya Roy
+
+Personal dotfiles managed with [[https://chezmoi.io][chezmoi]].
+
+* Install
+
+#+begin_src sh :eval never
+sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply mroyme
+#+end_src
+
+Or, if chezmoi is already installed:
+
+#+begin_src sh :eval never
+chezmoi init --apply mroyme
+#+end_src
+
+* What's in here
+
+| Path                                      | Purpose                                      |
+|-------------------------------------------+----------------------------------------------|
+| =dot_zshrc=, =dot_zshenv=, =dot_zprofile= | Zsh shell configuration                      |
+| =dot_gitconfig.tmpl=                      | Git config (templated per-machine)           |
+| =executable_dot_githelpers=               | Git helper functions sourced by =.gitconfig= |
+| =dot_config/starship.toml=                | [[https://starship.rs][Starship]] prompt                              |
+| =dot_config/ghostty/=                     | [[https://ghostty.org][Ghostty]] terminal                             |
+| =dot_config/zed/=                         | [[https://zed.dev][Zed]] editor                                   |
+| =dot_config/doom/=                        | [[https://github.com/doomemacs/doomemacs][Doom Emacs]]                                   |
+| =dot_config/jj/=                          | [[https://github.com/martinvonz/jj][Jujutsu]] VCS                                  |
+| =dot_config/mise/=                        | [[https://mise.jdx.dev][mise]] toolchain manager                       |
+| =dot_config/cmux/=                        | cmux terminal multiplexer                    |
+| =dot_config/private_karabiner/=           | [[https://karabiner-elements.pqrs.org][Karabiner-Elements]] keymaps                   |
+| =dot_local/bin/=                          | Personal scripts on =$PATH=                  |
+
+* External sources
+
+=.chezmoiexternal.toml= pulls Neovim config from [[https://github.com/mroyme/kickstart.nvim][mroyme/kickstart.nvim]] into
+=~/.config/nvim=.
+
+* Common commands
+
+#+begin_src sh :eval never
+chezmoi diff          # preview pending changes
+chezmoi apply         # apply changes to $HOME
+chezmoi edit FILE     # edit a managed file in the source state
+chezmoi update        # pull repo + apply
+#+end_src
