@@ -1,0 +1,5 @@
+[".config/nvim"]
+    type = "git-repo"
+    url = "git@github.com:mroyme/kickstart.nvim.git"
+    [".config/nvim".pull]
+        args = ["--ff-only"]

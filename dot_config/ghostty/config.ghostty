@@ -1,0 +1,10 @@
+auto-update-channel = tip
+
+# background-opacity = 0.95
+font-family = Lilex Nerd Font
+font-size = 12
+macos-titlebar-style = tabs
+theme = GitHub Dark Default
+
+keybind = global:cmd+backquote=toggle_quick_terminal
+keybind = shift+enter=text:\x1b\r

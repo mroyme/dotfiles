@@ -1,0 +1,61 @@
+# Created by newuser for 5.9
+# Lines configured by zsh-newuser-install
+HISTFILE="${HOME}/.zsh_history"
+HISTSIZE=1000000
+SAVEHIST=1000000
+setopt autocd beep extendedglob nomatch notify interactive_comments
+bindkey -e
+# End of lines configured by zsh-newuser-install
+
+# The following lines were added by compinstall
+zstyle :compinstall filename "${HOME}/.zshrc"
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+
+
+###########
+# Aliases #
+###########
+
+command -v nvim >/dev/null && alias vim=nvim
+command -v eza  >/dev/null && alias ls="eza -l --icons=auto"
+
+
+###########
+# Plugins #
+###########
+
+[[ -f "${HOME}/.config/zsh/plugins/fzf-tab/fzf-tab.plugin.zsh" ]] && \
+  source "${HOME}/.config/zsh/plugins/fzf-tab/fzf-tab.plugin.zsh"
+
+
+#########
+# Tools #
+#########
+
+# starship prompt
+command -v starship >/dev/null && eval "$(starship init zsh)"
+
+# Set up fzf key bindings and fuzzy completion
+command -v fzf >/dev/null && source <(fzf --zsh)
+
+# zoxide
+command -v zoxide >/dev/null && eval "$(zoxide init zsh --cmd cd)"
+
+
+########
+# Path #
+########
+
+# pnpm
+if [[ "${OSTYPE}" == darwin* ]]; then
+  export PNPM_HOME="${HOME}/Library/pnpm"
+else
+  export PNPM_HOME="${HOME}/.local/share/pnpm"
+fi
+case ":${PATH}:" in
+  *":${PNPM_HOME}/bin:"*) ;;
+  *) export PATH="${PNPM_HOME}/bin:${PATH}" ;;
+esac
+# pnpm end

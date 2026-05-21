@@ -1,0 +1,17 @@
+#:schema https://docs.jj-vcs.dev/latest/config-schema.json
+
+[remotes.origin]
+auto-track-bookmarks = "*"
+[remotes.upstream]
+auto-track-bookmarks = "main"
+
+[signing]
+behavior = "own"
+backend = "gpg"
+
+[ui]
+editor = "nvim"
+
+[user]
+name = "Madhurjya Roy"
+email = "m@mroy.me"

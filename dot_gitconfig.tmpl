@@ -1,0 +1,67 @@
+[alias]
+	br = branch
+	ci = commit
+	co = checkout
+	st = status
+
+	l = "!. ~/.githelpers && pretty_git_log"
+	la = "!git l --all"
+	lg = "!git l -G $1 -- $2"
+	lr = "!git l -30"
+	lra = "!git lr --all"
+
+	feature = !sh -c 'git checkout --no-track -b $0 origin/main'
+	ruf = "!. ~/.githelpers && remove_untracked_files"
+	sup = "!git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`"
+	tree = log --oneline --decorate --graph
+
+[branch]
+	autosetuprebase = always
+
+	
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	ui = true
+
+[commit]
+	gpgsign = true
+	verbose = true
+
+[core]
+	autocrlf = input
+	excludesfile = ~/.gitignore
+
+[diff "gpg"]
+	binary = true
+	textconv = gpg -d --quiet --yes --compress-algo=none --no-encrypt-to --batch --use-agent
+
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
+[init]
+	defaultBranch = main
+
+[pull]
+	rebase = true
+
+[push]
+	default = current
+	followTags = true
+
+[remote]
+	pushDefault = origin
+
+[user]
+	name = Madhurjya Roy 
+	email = m@mroy.me
+	signingkey = 7EED1C18A12D43FE61729903744118D6B8F69F1C
+
+[gpg]
+	program = {{ lookPath "gpg" | default "/usr/bin/gpg" }}
+

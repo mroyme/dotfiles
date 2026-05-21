@@ -1,0 +1,48 @@
+########
+# Brew #
+########
+
+# Homebrew (Apple Silicon at /opt/homebrew, Intel at /usr/local)
+if [[ -x /opt/homebrew/bin/brew ]]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+elif [[ -x /usr/local/bin/brew ]]; then
+  eval "$(/usr/local/bin/brew shellenv)"
+fi
+
+
+###############
+# JetBrains   #
+###############
+
+# Toolbox App scripts
+[[ -d "${HOME}/Library/Application Support/JetBrains/Toolbox/scripts" ]] && \
+  export PATH="${PATH}:${HOME}/Library/Application Support/JetBrains/Toolbox/scripts"
+
+
+############
+# OrbStack #
+############
+
+[[ -f "${HOME}/.orbstack/shell/init.zsh" ]] && \
+  source "${HOME}/.orbstack/shell/init.zsh" 2>/dev/null
+
+
+########
+# Path #
+########
+
+# These have been added manually
+[[ -d /opt/homebrew/opt/curl/bin ]]    && path=("/opt/homebrew/opt/curl/bin" $path)
+[[ -d "${HOME}/.config/emacs/bin" ]]   && path=("${HOME}/.config/emacs/bin" $path)
+[[ -d "${HOME}/.ghcup/bin" ]]          && path=("${HOME}/.ghcup/bin" $path)
+[[ -n "${GOBIN}" && -d "${GOBIN}" ]]   && path+=("${GOBIN}")
+[[ -n "${ANDROID_HOME}" && -d "${ANDROID_HOME}/emulator" ]]       && path+=("${ANDROID_HOME}/emulator")
+[[ -n "${ANDROID_HOME}" && -d "${ANDROID_HOME}/platform-tools" ]] && path+=("${ANDROID_HOME}/platform-tools")
+export PATH
+
+
+#########
+# rbenv #
+#########
+command -v rbenv >/dev/null && eval "$(rbenv init - --no-rehash zsh)"
+

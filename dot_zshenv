@@ -1,0 +1,37 @@
+##############
+# Editor     #
+##############
+
+export EDITOR=nvim
+export VISUAL="${EDITOR}"
+
+
+########
+# Go   #
+########
+
+export GOPATH="${HOME}/go"
+export GOBIN="${GOPATH}/bin"
+
+
+###########
+# Android #
+###########
+
+export ANDROID_HOME="${HOME}/Library/Android/sdk"
+
+
+##########
+# Rust   #
+##########
+
+[[ -f "${HOME}/.cargo/env" ]] && . "${HOME}/.cargo/env"
+
+
+##########
+# Path   #
+##########
+#
+# ~/.local/bin (uv, pipx, cargo, etc.)
+[[ -f "${HOME}/.local/bin/env" ]] && . "${HOME}/.local/bin/env"
+
