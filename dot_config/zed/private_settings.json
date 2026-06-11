@@ -21,22 +21,10 @@
     "dock": "right",
   },
   "agent_servers": {
-    "opencode": {
-      "type": "registry"
-    },
     "pi-acp": {
       "type": "registry"
     },
     "codex-acp": {
-      "type": "registry",
-    },
-    "cursor": {
-      "type": "registry",
-    },
-    "gemini": {
-      "type": "registry",
-    },
-    "claude-acp": {
       "type": "registry",
     },
   },

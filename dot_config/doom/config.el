@@ -73,3 +73,12 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+
+
+;; Start the Emacs server automatically so emacsclient and
+;; Emacs Client.app can connect to this instance.
+(require 'server)
+
+(unless (server-running-p)
+  (server-start))
+
