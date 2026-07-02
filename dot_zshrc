@@ -48,6 +48,9 @@ command -v zoxide >/dev/null && eval "$(zoxide init zsh --cmd cd)"
 # Path #
 ########
 
+typeset -U path PATH
+path=($HOME/.local/bin(N) $path)
+
 # pnpm
 if [[ "${OSTYPE}" == darwin* ]]; then
   export PNPM_HOME="${HOME}/Library/pnpm"

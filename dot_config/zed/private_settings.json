@@ -25,6 +25,10 @@
       "type": "registry"
     },
     "codex-acp": {
+      "default_config_options": {
+        "reasoning_effort": "xhigh",
+        "mode": "auto"
+      },
       "type": "registry",
     },
   },

@@ -27,11 +27,3 @@ export ANDROID_HOME="${HOME}/Library/Android/sdk"
 
 [[ -f "${HOME}/.cargo/env" ]] && . "${HOME}/.cargo/env"
 
-
-##########
-# Path   #
-##########
-#
-# ~/.local/bin (uv, pipx, cargo, etc.)
-[[ -f "${HOME}/.local/bin/env" ]] && . "${HOME}/.local/bin/env"
-
