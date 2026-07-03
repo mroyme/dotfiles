@@ -43,6 +43,20 @@ command -v fzf >/dev/null && source <(fzf --zsh)
 # zoxide
 command -v zoxide >/dev/null && eval "$(zoxide init zsh --cmd cd)"
 
+# vivid
+command -v vivid >/dev/null && export LS_COLORS="$(vivid generate one-dark)"
+
+
+####################
+# Completion style #
+####################
+
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+zstyle ':completion:*' menu no
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza --color --icons=auto $realpath'
+zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'eza --color --icons=auto $realpath'
+
 
 ########
 # Path #
@@ -50,6 +64,7 @@ command -v zoxide >/dev/null && eval "$(zoxide init zsh --cmd cd)"
 
 typeset -U path PATH
 path=($HOME/.local/bin(N) $path)
+export PATH
 
 # pnpm
 if [[ "${OSTYPE}" == darwin* ]]; then
